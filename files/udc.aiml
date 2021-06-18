@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I'm sorry, I dont understand. If you're studying Computer Science and would like to speak to a career counselor, type "Careers"</template>
+  </category>
+  <category>
+      <pattern>HI</pattern>
+      <template>Hi there, I provide career guidance for Computer Science students. To continue, type "Careers"</template>
+  </category>
+  <category>
+      <pattern>CAREERS</pattern>
+      <template>What fascinates you most IT, Data, or Programming</template>
+  </category>
+  <category>
+      <pattern>IT</pattern>
+      <that>What fascinates you most IT, Data, or Programming</that>
+      <template>I have linked a couple of IT related career paths
+      <carousel>
+          <card>
+              <image>https://www.bls.gov/ooh/images/1818.jpg</image>
+              <title>Network Administrator</title>
+              <subtitle>Design and Manage Networking Systems</subtitle>
+              <button>
+                  <text>Select if interested</text>
+                  <postback>NAselected</postback>
+              </button>
+          </card>
+          <card>
+              <image>https://download.pingcap.com/images/blog/choosing-right-database-for-your-applications.png</image>
+              <title>Database Administrator</title>
+              <subtitle>Design and Manage Database Systems</subtitle>
+              <button>
+                  <text>Select if interested</text>
+                  <postback>DBselected</postback>
+              </button>
+          </card>
+      </carousel>
+      </template>
+  </category>
+  <category>
+      <pattern>NAselected</pattern>
+      <template>
+          <link>
+              <text>Here is some great information about Network Administrators</text>
+              <url>https://www.computerscience.org/careers/network-administrator/</url>
+          </link>
+      </template>
+  </category>
+  <category>
+      <pattern>DBselected</pattern>
+      <template>
+          <link>
+              <text>Here is some great information about Database Administrators</text>
+              <url>https://www.computerscience.org/careers/database-administrator/</url>
+          </link>
+      </template>
+  </category>
+  <category>
+      <pattern>DATA</pattern>
+      <that>What fascinates you most IT, Data, or Programming</that>
+      <template>You should definitely check out Data Science
+              <card>
+                  <image>https://img.deusm.com/informationweek/November19/datascience-pdusit-stock.jpg</image>
+                  <title>Data Scientist</title>
+                  <subtitle>Collecting and Analyzing Data</subtitle>
+                  <button>
+                      <text>Select if interested</text>
+                      <postback>DSselected</postback>
+                  </button>
+              </card>
+      </template>
+  </category>
+  <category>
+      <pattern>DSselected</pattern>
+      <template>
+          <link>
+              <text>Here is some great information about Data Scienists</text>
+              <url>https://www.computerscience.org/careers/data-science/</url>
+          </link>
+      </template>
+  </category>
+  <category>
+      <pattern>PROGRAMMING</pattern>
+      <that>What fascinates you most IT, Data, or Programming</that>
+      <template>I have linked a couple of Programming related career paths
+      <carousel>
+          <card>
+              <image>https://woz-u.com/wp-content/uploads/2020/02/What-Do-Software-Engineers-Do-WOZ-1-min.png</image>
+              <title>Software Developer</title>
+              <subtitle>Design and Build Computer Programs</subtitle>
+              <button>
+                  <text>Select if interested</text>
+                  <postback>SDselected</postback>
+              </button>
+          </card>
+          <card>
+              <image>https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/11/06165041/video-game-developer.jpg</image>
+              <title>Video Game Designer</title>
+              <subtitle>Design, Develop, and Maintain Video Games</subtitle>
+              <button>
+                  <text>Select if interested</text>
+                  <postback>VGselected</postback>
+              </button>
+          </card>
+      </carousel>
+      </template>
+  </category>
+  <category>
+      <pattern>SDselected</pattern>
+      <template>
+          <link>
+              <text>Here is some great information about Software Developers</text>
+              <url>https://www.computerscience.org/careers/software-developer/</url>
+          </link>
+      </template>
+  </category>
+  <category>
+      <pattern>VGselected</pattern>
+      <template>
+          <link>
+              <text>Here is some great information about Video Game Designers</text>
+              <url>https://www.computerscience.org/careers/video-game-designer/</url>
+          </link>
+      </template>
+  </category>
+</aiml>
